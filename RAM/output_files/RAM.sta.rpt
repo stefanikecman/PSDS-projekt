@@ -1,0 +1,1059 @@
+TimeQuest Timing Analyzer report for RAM
+Tue Jun 20 21:17:14 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 're_i'
+ 12. Slow Model Hold: 're_i'
+ 13. Slow Model Minimum Pulse Width: 're_i'
+ 14. Slow Model Minimum Pulse Width: 'waddr_i[0]'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 're_i'
+ 25. Fast Model Hold: 're_i'
+ 26. Fast Model Minimum Pulse Width: 're_i'
+ 27. Fast Model Minimum Pulse Width: 'waddr_i[0]'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Setup Transfers
+ 38. Hold Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; RAM                                                               ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C70F896C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                 ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets        ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+; re_i       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { re_i }       ;
+; waddr_i[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { waddr_i[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; re_i  ; -1.740 ; -15.228       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; re_i  ; 1.743 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; re_i       ; -1.380 ; -11.380          ;
+; waddr_i[0] ; -1.222 ; -1.222           ;
++------------+--------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 're_i'                                                                                   ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.740 ; ram[1][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.518     ; 0.758      ;
+; -1.608 ; ram[1][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.517     ; 0.627      ;
+; -1.599 ; ram[1][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.516     ; 0.619      ;
+; -1.476 ; ram[1][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.517     ; 0.495      ;
+; -1.472 ; ram[1][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.517     ; 0.491      ;
+; -1.472 ; ram[1][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.517     ; 0.491      ;
+; -1.472 ; ram[1][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.518     ; 0.490      ;
+; -1.463 ; ram[1][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.515     ; 0.484      ;
+; -1.463 ; ram[1][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.519     ; 0.480      ;
+; -1.463 ; ram[1][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -1.518     ; 0.481      ;
+; -1.351 ; ram[0][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.589     ; 0.798      ;
+; -1.247 ; ram[0][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.525     ; 0.758      ;
+; -1.183 ; ram[0][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.592     ; 0.627      ;
+; -1.182 ; ram[0][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.591     ; 0.627      ;
+; -1.162 ; ram[0][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.589     ; 0.609      ;
+; -1.106 ; ram[0][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.525     ; 0.617      ;
+; -1.100 ; ram[0][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.526     ; 0.610      ;
+; -1.058 ; ram[0][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.592     ; 0.502      ;
+; -0.984 ; ram[0][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.523     ; 0.497      ;
+; -0.973 ; ram[0][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -1.525     ; 0.484      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 're_i'                                                                                   ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 1.743 ; ram[0][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.525     ; 0.484      ;
+; 1.754 ; ram[0][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.523     ; 0.497      ;
+; 1.828 ; ram[0][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.592     ; 0.502      ;
+; 1.870 ; ram[0][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.526     ; 0.610      ;
+; 1.876 ; ram[0][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.525     ; 0.617      ;
+; 1.932 ; ram[0][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.589     ; 0.609      ;
+; 1.952 ; ram[0][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.591     ; 0.627      ;
+; 1.953 ; ram[0][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.592     ; 0.627      ;
+; 2.017 ; ram[0][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.525     ; 0.758      ;
+; 2.121 ; ram[0][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -1.589     ; 0.798      ;
+; 2.233 ; ram[1][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.515     ; 0.484      ;
+; 2.233 ; ram[1][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.519     ; 0.480      ;
+; 2.233 ; ram[1][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.518     ; 0.481      ;
+; 2.242 ; ram[1][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.517     ; 0.491      ;
+; 2.242 ; ram[1][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.517     ; 0.491      ;
+; 2.242 ; ram[1][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.518     ; 0.490      ;
+; 2.246 ; ram[1][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.517     ; 0.495      ;
+; 2.369 ; ram[1][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.516     ; 0.619      ;
+; 2.378 ; ram[1][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.517     ; 0.627      ;
+; 2.510 ; ram[1][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -1.518     ; 0.758      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 're_i'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; re_i  ; Rise       ; re_i                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[0]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[0]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[1]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[1]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[2]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[2]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[3]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[3]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[4]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[4]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[5]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[5]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[6]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[6]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[7]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[7]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[8]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[8]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[9]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[9]~reg0       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[0]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[0]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[1]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[1]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[2]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[2]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[3]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[3]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[4]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[4]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[5]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[5]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[6]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[6]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[7]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[7]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[8]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[8]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[9]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[9]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'waddr_i[0]'                                                                      ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock      ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; waddr_i[0] ; Rise       ; waddr_i[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][0]~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][0]~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; waddr_i[0]|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; waddr_i[0]|combout          ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; 3.489 ; 3.489 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; 3.489 ; 3.489 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; 2.614 ; 2.614 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 2.614 ; 2.614 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 2.274 ; 2.274 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 2.597 ; 2.597 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 2.296 ; 2.296 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 2.162 ; 2.162 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 2.428 ; 2.428 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 2.014 ; 2.014 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 2.202 ; 2.202 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 2.257 ; 2.257 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 2.028 ; 2.028 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; 2.568 ; 2.568 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 2.568 ; 2.568 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 2.270 ; 2.270 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 2.351 ; 2.351 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 2.499 ; 2.499 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 2.311 ; 2.311 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 2.318 ; 2.318 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 2.285 ; 2.285 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 2.284 ; 2.284 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 2.467 ; 2.467 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 2.282 ; 2.282 ; Fall       ; waddr_i[0]      ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; -3.019 ; -3.019 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; -3.019 ; -3.019 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; -1.335 ; -1.335 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.734 ; -1.734 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -1.393 ; -1.393 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.705 ; -1.705 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.617 ; -1.617 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.476 ; -1.476 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.552 ; -1.552 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -1.335 ; -1.335 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -1.340 ; -1.340 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.564 ; -1.564 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -1.336 ; -1.336 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; -1.405 ; -1.405 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.740 ; -1.740 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -1.406 ; -1.406 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.535 ; -1.535 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.628 ; -1.628 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.447 ; -1.447 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.624 ; -1.624 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -1.405 ; -1.405 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -1.413 ; -1.413 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.635 ; -1.635 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -1.410 ; -1.410 ; Fall       ; waddr_i[0]      ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 6.700 ; 6.700 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 6.293 ; 6.293 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 6.565 ; 6.565 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 6.296 ; 6.296 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 6.596 ; 6.596 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 6.574 ; 6.574 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 6.221 ; 6.221 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 6.700 ; 6.700 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 6.400 ; 6.400 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 6.504 ; 6.504 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 6.517 ; 6.517 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 6.221 ; 6.221 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 6.293 ; 6.293 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 6.565 ; 6.565 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 6.296 ; 6.296 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 6.596 ; 6.596 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 6.574 ; 6.574 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 6.221 ; 6.221 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 6.700 ; 6.700 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 6.400 ; 6.400 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 6.504 ; 6.504 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 6.517 ; 6.517 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; re_i  ; -0.431 ; -3.349        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; re_i  ; 0.691 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++------------+--------+------------------+
+; Clock      ; Slack  ; End Point TNS    ;
++------------+--------+------------------+
+; re_i       ; -1.380 ; -11.380          ;
+; waddr_i[0] ; -1.222 ; -1.222           ;
++------------+--------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 're_i'                                                                                   ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.431 ; ram[1][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.635     ; 0.328      ;
+; -0.370 ; ram[1][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.633     ; 0.269      ;
+; -0.364 ; ram[1][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.633     ; 0.263      ;
+; -0.320 ; ram[1][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.634     ; 0.218      ;
+; -0.315 ; ram[1][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.634     ; 0.213      ;
+; -0.314 ; ram[1][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.634     ; 0.212      ;
+; -0.313 ; ram[1][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.634     ; 0.211      ;
+; -0.308 ; ram[1][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.635     ; 0.205      ;
+; -0.307 ; ram[1][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.632     ; 0.207      ;
+; -0.307 ; ram[1][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 0.500        ; -0.634     ; 0.205      ;
+; 0.023  ; ram[0][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.669     ; 0.340      ;
+; 0.071  ; ram[0][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.636     ; 0.325      ;
+; 0.091  ; ram[0][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.671     ; 0.270      ;
+; 0.093  ; ram[0][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.670     ; 0.269      ;
+; 0.107  ; ram[0][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.668     ; 0.257      ;
+; 0.134  ; ram[0][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.636     ; 0.262      ;
+; 0.137  ; ram[0][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.637     ; 0.258      ;
+; 0.141  ; ram[0][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.672     ; 0.219      ;
+; 0.182  ; ram[0][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.634     ; 0.216      ;
+; 0.189  ; ram[0][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 1.000        ; -0.636     ; 0.207      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 're_i'                                                                                   ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.691 ; ram[0][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.636     ; 0.207      ;
+; 0.698 ; ram[0][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.634     ; 0.216      ;
+; 0.739 ; ram[0][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.672     ; 0.219      ;
+; 0.743 ; ram[0][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.637     ; 0.258      ;
+; 0.746 ; ram[0][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.636     ; 0.262      ;
+; 0.773 ; ram[0][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.668     ; 0.257      ;
+; 0.787 ; ram[0][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.670     ; 0.269      ;
+; 0.789 ; ram[0][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.671     ; 0.270      ;
+; 0.809 ; ram[0][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.636     ; 0.325      ;
+; 0.857 ; ram[0][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; 0.000        ; -0.669     ; 0.340      ;
+; 1.187 ; ram[1][3] ; rdata_o[3]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.632     ; 0.207      ;
+; 1.187 ; ram[1][8] ; rdata_o[8]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.634     ; 0.205      ;
+; 1.188 ; ram[1][6] ; rdata_o[6]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.635     ; 0.205      ;
+; 1.193 ; ram[1][9] ; rdata_o[9]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.634     ; 0.211      ;
+; 1.194 ; ram[1][7] ; rdata_o[7]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.634     ; 0.212      ;
+; 1.195 ; ram[1][4] ; rdata_o[4]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.634     ; 0.213      ;
+; 1.200 ; ram[1][1] ; rdata_o[1]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.634     ; 0.218      ;
+; 1.244 ; ram[1][0] ; rdata_o[0]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.633     ; 0.263      ;
+; 1.250 ; ram[1][5] ; rdata_o[5]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.633     ; 0.269      ;
+; 1.311 ; ram[1][2] ; rdata_o[2]~reg0 ; waddr_i[0]   ; re_i        ; -0.500       ; -0.635     ; 0.328      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 're_i'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; re_i  ; Rise       ; re_i                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[0]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[0]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[1]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[1]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[2]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[2]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[3]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[3]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[4]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[4]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[5]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[5]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[6]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[6]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[7]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[7]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[8]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[8]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[9]~reg0       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[9]~reg0       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[0]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[0]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[1]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[1]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[2]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[2]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[3]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[3]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[4]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[4]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[5]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[5]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[6]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[6]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[7]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[7]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[8]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[8]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; rdata_o[9]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; rdata_o[9]~reg0|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; re_i  ; Rise       ; re_i~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; re_i  ; Rise       ; re_i~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'waddr_i[0]'                                                                      ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock      ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; waddr_i[0] ; Rise       ; waddr_i[0]                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][0]~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][0]~1|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][0]~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][0]~1|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[0][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[0][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[0][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[0][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][0]~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][1]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][1]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][2]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][2]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][3]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][3]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][4]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][4]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][5]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][5]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][6]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][6]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][7]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][7]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][8]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][8]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Fall       ; ram[1][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Fall       ; ram[1][9]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; ram[1][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; ram[1][9]|datad             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; waddr_i[0] ; Rise       ; waddr_i[0]|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; waddr_i[0] ; Rise       ; waddr_i[0]|combout          ;
++--------+--------------+----------------+------------------+------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; 1.851 ; 1.851 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; 1.851 ; 1.851 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; 1.510 ; 1.510 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 1.506 ; 1.506 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 1.346 ; 1.346 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 1.510 ; 1.510 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 1.329 ; 1.329 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 1.310 ; 1.310 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 1.381 ; 1.381 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 1.206 ; 1.206 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 1.284 ; 1.284 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 1.316 ; 1.316 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 1.208 ; 1.208 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; 1.493 ; 1.493 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 1.493 ; 1.493 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 1.345 ; 1.345 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 1.396 ; 1.396 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 1.419 ; 1.419 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 1.380 ; 1.380 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 1.342 ; 1.342 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 1.329 ; 1.329 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 1.324 ; 1.324 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 1.415 ; 1.415 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 1.322 ; 1.322 ; Fall       ; waddr_i[0]      ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; -1.640 ; -1.640 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; -1.640 ; -1.640 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; -0.926 ; -0.926 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.142 ; -1.142 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -0.985 ; -0.985 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.140 ; -1.140 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.055 ; -1.055 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.032 ; -1.032 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.022 ; -1.022 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -0.932 ; -0.932 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -0.931 ; -0.931 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.033 ; -1.033 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -0.926 ; -0.926 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; -0.963 ; -0.963 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.144 ; -1.144 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -0.987 ; -0.987 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.057 ; -1.057 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.060 ; -1.060 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.021 ; -1.021 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.059 ; -1.059 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -0.966 ; -0.966 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -0.965 ; -0.965 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.068 ; -1.068 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -0.963 ; -0.963 ; Fall       ; waddr_i[0]      ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 3.763 ; 3.763 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 3.613 ; 3.613 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 3.729 ; 3.729 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 3.621 ; 3.621 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 3.739 ; 3.739 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 3.737 ; 3.737 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 3.547 ; 3.547 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 3.763 ; 3.763 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 3.632 ; 3.632 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 3.672 ; 3.672 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 3.684 ; 3.684 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 3.547 ; 3.547 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 3.613 ; 3.613 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 3.729 ; 3.729 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 3.621 ; 3.621 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 3.739 ; 3.739 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 3.737 ; 3.737 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 3.547 ; 3.547 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 3.763 ; 3.763 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 3.632 ; 3.632 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 3.672 ; 3.672 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 3.684 ; 3.684 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.740  ; 0.691 ; N/A      ; N/A     ; -1.380              ;
+;  re_i            ; -1.740  ; 0.691 ; N/A      ; N/A     ; -1.380              ;
+;  waddr_i[0]      ; N/A     ; N/A   ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -15.228 ; 0.0   ; 0.0      ; 0.0     ; -12.602             ;
+;  re_i            ; -15.228 ; 0.000 ; N/A      ; N/A     ; -11.380             ;
+;  waddr_i[0]      ; N/A     ; N/A   ; N/A      ; N/A     ; -1.222              ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; 3.489 ; 3.489 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; 3.489 ; 3.489 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; 2.614 ; 2.614 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 2.614 ; 2.614 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 2.274 ; 2.274 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 2.597 ; 2.597 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 2.296 ; 2.296 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 2.162 ; 2.162 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 2.428 ; 2.428 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 2.014 ; 2.014 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 2.202 ; 2.202 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 2.257 ; 2.257 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 2.028 ; 2.028 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; 2.568 ; 2.568 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; 2.568 ; 2.568 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; 2.270 ; 2.270 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; 2.351 ; 2.351 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; 2.499 ; 2.499 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; 2.311 ; 2.311 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; 2.318 ; 2.318 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; 2.285 ; 2.285 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; 2.284 ; 2.284 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; 2.467 ; 2.467 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; 2.282 ; 2.282 ; Fall       ; waddr_i[0]      ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; raddr_i[*]  ; re_i       ; -1.640 ; -1.640 ; Rise       ; re_i            ;
+;  raddr_i[0] ; re_i       ; -1.640 ; -1.640 ; Rise       ; re_i            ;
+; wdata_i[*]  ; waddr_i[0] ; -0.926 ; -0.926 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.142 ; -1.142 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -0.985 ; -0.985 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.140 ; -1.140 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.055 ; -1.055 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.032 ; -1.032 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.022 ; -1.022 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -0.932 ; -0.932 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -0.931 ; -0.931 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.033 ; -1.033 ; Rise       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -0.926 ; -0.926 ; Rise       ; waddr_i[0]      ;
+; wdata_i[*]  ; waddr_i[0] ; -0.963 ; -0.963 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[0] ; waddr_i[0] ; -1.144 ; -1.144 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[1] ; waddr_i[0] ; -0.987 ; -0.987 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[2] ; waddr_i[0] ; -1.057 ; -1.057 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[3] ; waddr_i[0] ; -1.060 ; -1.060 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[4] ; waddr_i[0] ; -1.021 ; -1.021 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[5] ; waddr_i[0] ; -1.059 ; -1.059 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[6] ; waddr_i[0] ; -0.966 ; -0.966 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[7] ; waddr_i[0] ; -0.965 ; -0.965 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[8] ; waddr_i[0] ; -1.068 ; -1.068 ; Fall       ; waddr_i[0]      ;
+;  wdata_i[9] ; waddr_i[0] ; -0.963 ; -0.963 ; Fall       ; waddr_i[0]      ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 6.700 ; 6.700 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 6.293 ; 6.293 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 6.565 ; 6.565 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 6.296 ; 6.296 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 6.596 ; 6.596 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 6.574 ; 6.574 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 6.221 ; 6.221 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 6.700 ; 6.700 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 6.400 ; 6.400 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 6.504 ; 6.504 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 6.517 ; 6.517 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; rdata_o[*]  ; re_i       ; 3.547 ; 3.547 ; Rise       ; re_i            ;
+;  rdata_o[0] ; re_i       ; 3.613 ; 3.613 ; Rise       ; re_i            ;
+;  rdata_o[1] ; re_i       ; 3.729 ; 3.729 ; Rise       ; re_i            ;
+;  rdata_o[2] ; re_i       ; 3.621 ; 3.621 ; Rise       ; re_i            ;
+;  rdata_o[3] ; re_i       ; 3.739 ; 3.739 ; Rise       ; re_i            ;
+;  rdata_o[4] ; re_i       ; 3.737 ; 3.737 ; Rise       ; re_i            ;
+;  rdata_o[5] ; re_i       ; 3.547 ; 3.547 ; Rise       ; re_i            ;
+;  rdata_o[6] ; re_i       ; 3.763 ; 3.763 ; Rise       ; re_i            ;
+;  rdata_o[7] ; re_i       ; 3.632 ; 3.632 ; Rise       ; re_i            ;
+;  rdata_o[8] ; re_i       ; 3.672 ; 3.672 ; Rise       ; re_i            ;
+;  rdata_o[9] ; re_i       ; 3.684 ; 3.684 ; Rise       ; re_i            ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; waddr_i[0] ; re_i     ; 10       ; 10       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; waddr_i[0] ; re_i     ; 10       ; 10       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 12    ; 12   ;
+; Unconstrained Input Port Paths  ; 50    ; 50   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jun 20 21:17:13 2023
+Info: Command: quartus_sta RAM -c RAM
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 20 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'RAM.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name re_i re_i
+    Info (332105): create_clock -period 1.000 -name waddr_i[0] waddr_i[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.740
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.740       -15.228 re_i 
+Info (332146): Worst-case hold slack is 1.743
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.743         0.000 re_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 re_i 
+    Info (332119):    -1.222        -1.222 waddr_i[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.431
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.431        -3.349 re_i 
+Info (332146): Worst-case hold slack is 0.691
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.691         0.000 re_i 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -11.380 re_i 
+    Info (332119):    -1.222        -1.222 waddr_i[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4542 megabytes
+    Info: Processing ended: Tue Jun 20 21:17:14 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

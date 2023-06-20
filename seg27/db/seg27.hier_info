@@ -1,0 +1,38 @@
+|seg27
+i[0] => o.IN0
+i[0] => o.IN0
+i[0] => o.IN0
+i[0] => o.IN1
+i[0] => o.IN0
+i[0] => o.IN0
+i[0] => o.IN0
+i[0] => o.IN0
+i[1] => o.IN0
+i[1] => o.IN1
+i[1] => o.IN0
+i[1] => o.IN1
+i[1] => o.IN0
+i[1] => o.IN0
+i[1] => o.IN1
+i[1] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[2] => o.IN1
+i[3] => o.IN1
+i[3] => o.IN1
+i[3] => o.IN1
+i[3] => o.IN1
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+

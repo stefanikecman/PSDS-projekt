@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -81.230
+TNS   : -2846.329
+
+Type  : Slow Model Setup 'state.SVIRANJE'
+Slack : -5.392
+TNS   : -56.226
+
+Type  : Slow Model Setup 'sekunde[0]'
+Slack : -2.152
+TNS   : -24.845
+
+Type  : Slow Model Setup 'adresniVektorKompozicije[0]'
+Slack : 0.235
+TNS   : 0.000
+
+Type  : Slow Model Hold 'adresniVektorKompozicije[0]'
+Slack : -3.027
+TNS   : -53.478
+
+Type  : Slow Model Hold 'sekunde[0]'
+Slack : -1.986
+TNS   : -33.473
+
+Type  : Slow Model Hold 'clk'
+Slack : -1.422
+TNS   : -84.129
+
+Type  : Slow Model Hold 'state.SVIRANJE'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk'
+Slack : -3.414
+TNS   : -208.733
+
+Type  : Slow Model Recovery 'sekunde[0]'
+Slack : 0.654
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'adresniVektorKompozicije[0]'
+Slack : 2.181
+TNS   : 0.000
+
+Type  : Slow Model Removal 'adresniVektorKompozicije[0]'
+Slack : -3.467
+TNS   : -55.281
+
+Type  : Slow Model Removal 'sekunde[0]'
+Slack : -2.566
+TNS   : -46.847
+
+Type  : Slow Model Removal 'clk'
+Slack : -0.738
+TNS   : -42.824
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -345.380
+
+Type  : Slow Model Minimum Pulse Width 'adresniVektorKompozicije[0]'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Slow Model Minimum Pulse Width 'state.SVIRANJE'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Slow Model Minimum Pulse Width 'sekunde[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : -36.285
+TNS   : -1115.201
+
+Type  : Fast Model Setup 'state.SVIRANJE'
+Slack : -2.377
+TNS   : -24.579
+
+Type  : Fast Model Setup 'sekunde[0]'
+Slack : -0.501
+TNS   : -3.293
+
+Type  : Fast Model Setup 'adresniVektorKompozicije[0]'
+Slack : 0.750
+TNS   : 0.000
+
+Type  : Fast Model Hold 'adresniVektorKompozicije[0]'
+Slack : -1.751
+TNS   : -29.107
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.164
+TNS   : -79.569
+
+Type  : Fast Model Hold 'sekunde[0]'
+Slack : -1.067
+TNS   : -17.897
+
+Type  : Fast Model Hold 'state.SVIRANJE'
+Slack : -0.245
+TNS   : -1.517
+
+Type  : Fast Model Recovery 'clk'
+Slack : -1.093
+TNS   : -65.670
+
+Type  : Fast Model Recovery 'sekunde[0]'
+Slack : 0.869
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'adresniVektorKompozicije[0]'
+Slack : 1.397
+TNS   : 0.000
+
+Type  : Fast Model Removal 'adresniVektorKompozicije[0]'
+Slack : -1.677
+TNS   : -24.549
+
+Type  : Fast Model Removal 'sekunde[0]'
+Slack : -1.065
+TNS   : -20.238
+
+Type  : Fast Model Removal 'clk'
+Slack : -0.768
+TNS   : -52.048
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -345.380
+
+Type  : Fast Model Minimum Pulse Width 'adresniVektorKompozicije[0]'
+Slack : -1.380
+TNS   : -1.380
+
+Type  : Fast Model Minimum Pulse Width 'state.SVIRANJE'
+Slack : -0.500
+TNS   : -10.000
+
+Type  : Fast Model Minimum Pulse Width 'sekunde[0]'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------
